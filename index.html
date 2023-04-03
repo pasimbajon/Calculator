@@ -14,14 +14,14 @@
                 <input id="current_display" disabled='disabled'></input>
             </div>
             <div class="inputs">
-                <button class="button-operators">%</button>
+                <button class="button-operators" >%</button>
                 <button class="button-operators" onclick="clearEntry();">CE</button>
                 <button class="button-operators" onclick="clearInput();">C</button>
                 <button class="button-operators">&larr;</button>
 
-                <button class="button-operators"><sup>1</sup>/<sub>x</sub></button>
-                <button class="button-operators">x<sup>2</sup></button>
-                <button class="button-operators">&#8730;x</button>
+                <button class="button-operators" onclick="toDivieByOne(parseInt(document.getElementById('current_display').value));"><sup>1</sup>/<sub>x</sub></button>
+                <button class="button-operators" onclick="toThePower(parseInt(document.getElementById('current_display').value));">x<sup>2</sup></button>
+                <button class="button-operators" >&#8730;x</button>
                 <button class="button-operators" onclick="toDisplayDivide(parseInt(document.getElementById('current_display').value));">÷</button>
 
                 <button class="button-numbers" onclick="parseInt(document.getElementById('current_display').value+=7);">7</button>
