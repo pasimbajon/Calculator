@@ -9,6 +9,7 @@ let operator;
 function clearEntry(){
     document.getElementById('current_display').value=null;
     numberOne=0;
+    operator=0;
     for(var counter=0;counter<decimals;counter++){
         numbers.pop()
     }
@@ -19,6 +20,7 @@ function clearInput(){
     document.getElementById('previous_display').value=null;
     numberOne=0;
     numberTwo=0;
+    operator=0;
     for(counter=0;counter<decimals;counter++){
         numbers.pop()
     }
@@ -35,7 +37,7 @@ function toDisplayMinus(current_input){
     numberOne=current_input;
     if(checkInput()){
         operator=1;
-        document.getElementById('previous_display').value= numbersOne + operators[1];
+        document.getElementById('previous_display').value= numberOne + operators[1];
     }
 }
 function toDisplayMultipy(current_input){

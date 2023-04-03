@@ -25,23 +25,23 @@
                 <button class="button-operators" onclick="toDisplayDivide(parseInt(document.getElementById('current_display').value));">÷</button>
 
                 <button class="button-numbers" onclick="inputNumbers(parseInt(document.getElementById('current_display').value=7));">7</button>
-                <button class="button-numbers" onclick="parseInt(document.getElementById('current_display').value+=8);">8</button>
-                <button class="button-numbers" onclick="parseInt(document.getElementById('current_display').value+=9);">9</button>
+                <button class="button-numbers" onclick="inputNumbers(parseInt(document.getElementById('current_display').value=8));">8</button>
+                <button class="button-numbers" onclick="inputNumbers(parseInt(document.getElementById('current_display').value=9));">9</button>
                 <button class="button-operators" onclick="toDisplayMultipy(parseInt(document.getElementById('current_display').value));">x</button>
 
-                <button class="button-numbers" onclick="parseInt(document.getElementById('current_display').value+=4)">4</button>
-                <button class="button-numbers" onclick="parseInt(document.getElementById('current_display').value+=5)">5</button>
-                <button class="button-numbers" onclick="parseInt(document.getElementById('current_display').value+=6)">6</button>
+                <button class="button-numbers" onclick="inputNumbers(parseInt(document.getElementById('current_display').value=4));">4</button>
+                <button class="button-numbers" onclick="inputNumbers(parseInt(document.getElementById('current_display').value=5));">5</button>
+                <button class="button-numbers" onclick="inputNumbers(parseInt(document.getElementById('current_display').value=6));">6</button>
                 <button class="button-operators" onclick="toDisplayMinus(parseInt(document.getElementById('current_display').value));">-</button>
 
-                <button class="button-numbers" onclick="parseInt(document.getElementById('current_display').value+=1);">1</button>
-                <button class="button-numbers" onclick="parseInt(document.getElementById('current_display').value+=2);">2</button>
-                <button class="button-numbers" onclick="parseInt(document.getElementById('current_display').value+=3);">3</button>
+                <button class="button-numbers" onclick="inputNumbers(parseInt(document.getElementById('current_display').value=1));">1</button>
+                <button class="button-numbers" onclick="inputNumbers(parseInt(document.getElementById('current_display').value=2));">2</button>
+                <button class="button-numbers" onclick="inputNumbers(parseInt(document.getElementById('current_display').value=3));">3</button>
                 <button class="button-operators" onclick="toDisplayPlus(parseInt(document.getElementById('current_display').value));">+</button>
 
                 <button class="button-numbers" onclick="toNegative(parseInt(document.getElementById('current_display').value));"><sup>+</sup>/<sub>-</sub></button>
-                <button class="button-numbers" onclick="document.getElementById('current_display').value+=0;">0</button>
-                <button class="button-numbers">.</button>
+                <button class="button-numbers" onclick="inputNumbers(parseInt(document.getElementById('current_display').value=0));">0</button>
+                <button class="button-numbers" onclick="inputNumbers(document.getElementById('current_display').value='.');">.</button>
                 <button class="button-operators-equal" onclick="getResult(parseInt(document.getElementById('current_display').value));">=</button>
             </div>
         </div>
