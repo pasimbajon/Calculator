@@ -17,14 +17,14 @@
                 <button class="button-operators" >%</button>
                 <button class="button-operators" onclick="clearEntry();">CE</button>
                 <button class="button-operators" onclick="clearInput();">C</button>
-                <button class="button-operators">&larr;</button>
+                <button class="button-operators" onclick="deleteOneEntry();">&larr;</button>
 
                 <button class="button-operators" onclick="toDivieByOne(parseInt(document.getElementById('current_display').value));"><sup>1</sup>/<sub>x</sub></button>
                 <button class="button-operators" onclick="toThePower(parseInt(document.getElementById('current_display').value));">x<sup>2</sup></button>
-                <button class="button-operators" >&#8730;x</button>
+                <button class="button-operators" onclick="toSquare(parseInt(document.getElementById('current_display').value));">&#8730;x</button>
                 <button class="button-operators" onclick="toDisplayDivide(parseInt(document.getElementById('current_display').value));">÷</button>
 
-                <button class="button-numbers" onclick="parseInt(document.getElementById('current_display').value+=7);">7</button>
+                <button class="button-numbers" onclick="inputNumbers(parseInt(document.getElementById('current_display').value=7));">7</button>
                 <button class="button-numbers" onclick="parseInt(document.getElementById('current_display').value+=8);">8</button>
                 <button class="button-numbers" onclick="parseInt(document.getElementById('current_display').value+=9);">9</button>
                 <button class="button-operators" onclick="toDisplayMultipy(parseInt(document.getElementById('current_display').value));">x</button>
@@ -39,7 +39,7 @@
                 <button class="button-numbers" onclick="parseInt(document.getElementById('current_display').value+=3);">3</button>
                 <button class="button-operators" onclick="toDisplayPlus(parseInt(document.getElementById('current_display').value));">+</button>
 
-                <button class="button-numbers"><sup>+</sup>/<sub>-</sub></button>
+                <button class="button-numbers" onclick="toNegative(parseInt(document.getElementById('current_display').value));"><sup>+</sup>/<sub>-</sub></button>
                 <button class="button-numbers" onclick="document.getElementById('current_display').value+=0;">0</button>
                 <button class="button-numbers">.</button>
                 <button class="button-operators-equal" onclick="getResult(parseInt(document.getElementById('current_display').value));">=</button>

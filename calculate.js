@@ -1,14 +1,15 @@
 let numberOne;
 let numberTwo;
 let state;
-let decimals;
+var decimals=0;
 let numbers = [];
 const operators = ['+','-','x','÷','='];
 let operator;
+
 function clearEntry(){
     document.getElementById('current_display').value=null;
     numberOne=0;
-    for(counter=0;counter<=decimals+1;counter++){
+    for(var counter=0;counter<decimals;counter++){
         numbers.pop()
     }
     decimals=0;
@@ -18,7 +19,7 @@ function clearInput(){
     document.getElementById('previous_display').value=null;
     numberOne=0;
     numberTwo=0;
-    for(counter=0;counter<=decimals+1;counter++){
+    for(counter=0;counter<decimals;counter++){
         numbers.pop()
     }
     decimals=0;
@@ -71,7 +72,7 @@ function getResult(current_input){
         else{
             result = 0;
         }
-        document.getElementById('previous_display').value= numberOne + operators[operator] + numberTwo + operators[4];
+        document.getElementById('previous_display').value= numberOne + ' ' + operators[operator] + ' ' + numberTwo + ' ' + operators[4];
         document.getElementById('current_display').value= result;
     }  
 }
@@ -102,6 +103,29 @@ function toDivieByOne(current_input){
 }
 function inputNumbers(current_input){
     numbers.push(current_input);
-    document.getElementById('current_display').value+=number[decimals];
+    for(var counter=0;counter < decimals;counter++){
+        document.getElementById('current_display').value += numbers[decimals];
+    }
     decimals++;
+}
+function deleteOneEntry(){
+    if(numbers.length-1 > 0){
+        numbers.pop();
+        decimals--;
+        document.getElementById('current_display').value = numbers.join('');
+    }else{
+        document.getElementById('current_display').value = 0;
+        document.getElementById('previous_display').value = '';
+
+    }
+}
+function toNegative(current_input){
+    numberOne = -1*current_input;
+    document.getElementById('current_display').value=numberOne;
+}
+function toSquare(current_input){
+    Math.sqrt(current_input);
+    
+    document.getElementById('previous_display').value = '√' + current_input + operators[4];
+    document.getElementById('current_display').value=Math.sqrt(current_input);
 }
